@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#edf0ed" />
+  <title>MiniGestor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="logo-wrap" href="#" aria-label="MiniGestor, inicio">
+        <span class="logo-symbol" aria-hidden="true">MG</span>
+        <span>mini<strong>gestor</strong></span>
+      </a>
+      <span class="course-label">Grupo 5 <span class="course-divider" aria-hidden="true">/</span> <span class="course-topic">Framework backend</span></span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="titulo-principal">
+        <div>
+          <h1 id="titulo-principal">Organiza tus tareas.<br><em>No dejes que se pierdan.</em></h1>
+          <p class="intro-copy">Un espacio sencillo para anotar lo que sigue, marcar lo que ya hiciste y mantener el trabajo al día.</p>
+        </div>
+        <div class="intro-ornament" aria-hidden="true">
+          <span class="paper paper-back"></span>
+          <span class="paper paper-front"><i></i><i></i><i></i></span>
+        </div>
+      </section>
+
+      <div class="main-grid">
+        <section class="task-panel" aria-labelledby="titulo-tareas">
+          <div class="panel-heading">
+            <h2 id="titulo-tareas">Mi lista de tareas</h2>
+            <span class="count" id="contador">0 pendientes</span>
+          </div>
+
+          <form id="form-tarea" class="task-form">
+            <label for="texto-tarea">Nueva tarea</label>
+            <div class="input-row">
+              <input id="texto-tarea" name="texto" type="text" maxlength="100" required autocomplete="off" placeholder="Ej. Estudiar cómo funciona Express" />
+              <button class="add-button" type="submit">Agregar tarea</button>
+            </div>
+          </form>
+
+          <div class="filter-row" role="group" aria-label="Filtrar tareas">
+            <button type="button" class="filter active" data-filter="todas" aria-pressed="true">Todas</button>
+            <button type="button" class="filter" data-filter="pendientes" aria-pressed="false">Pendientes</button>
+            <button type="button" class="filter" data-filter="completadas" aria-pressed="false">Completadas</button>
+          </div>
+
+          <div class="task-list" id="lista-tareas" aria-live="polite"></div>
+
+          <div class="footer-panel">
+            <span><span id="completadas">0</span> completadas</span>
+            <span id="total">0 tareas en total</span>
+          </div>
+          <div id="mensaje" class="message" role="status" aria-live="polite"></div>
+        </section>
+
+        <aside class="explain-panel" aria-labelledby="accion-titulo">
+          <h2 class="aside-title" id="accion-titulo">Registro de actividad</h2>
+          <div class="action-trace">
+            <strong id="ultima-accion">Esperando tu primera acción</strong>
+            <span id="ultima-ruta">Al usar la lista, aquí aparecerá la ruta de Express.</span>
+          </div>
+          <p class="aside-note">Este registro ayuda a relacionar lo que hace la interfaz con las rutas del servidor.</p>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span>MiniGestor · Luna Ibarra — Alejandro Moreno</span>
+      <span>Node.js + Express + HTML/CSS/JavaScript</span>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ejemplo-1",
+    "texto": "Organizar Presentación Tesis",
+    "completada": false
+  },
+  {
+    "id": "ejemplo-2",
+    "texto": "Practicar para la sustentacion",
+    "completada": false
+  },
+  {
+    "id": "ejemplo-3",
+    "texto": "Realizar actividad de análisis y modelamiento de software",
+    "completada": false
+  }
+]
